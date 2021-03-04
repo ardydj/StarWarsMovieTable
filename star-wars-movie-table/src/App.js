@@ -1,11 +1,11 @@
 import './App.css';
-import TableBody from './components/Table.js';
+import TableComponent from './components/TableComponent.js';
 
 function App() {
   return (
     <div className="App">
-      <div>Hello World</div>
-      <TableBody />
+      <h1>Star Wars Movie Table</h1>
+      <TableComponent />
     </div>
   );
 }
