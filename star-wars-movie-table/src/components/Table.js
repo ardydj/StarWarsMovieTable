@@ -1,4 +1,5 @@
 import React from 'react';
+import sampleData from '../sampleTableData.js';
 import { Table } from '@material-ui/core';
 
 function TableBody() {
