@@ -1,16 +1,17 @@
 import React from 'react';
-import { TableRow } from '@materials-ui/core';
-import { TableCell } from '@materials-ui/core';
+import { TableRow } from '@material-ui/core';
+import { TableCell } from '@material-ui/core';
 
 function TableRowComponent(props) {
+  console.log(props.movie)
   return (
-    <div>
-      <TableRow>
-        <TableCell></TableCell>
-        <TableCell></TableCell>
-        <TableCell></TableCell>
-        <TableCell></TableCell>
-      </TableRow>
-    </div>
+    <TableRow>
+      <TableCell></TableCell>
+      <TableCell></TableCell>
+      <TableCell></TableCell>
+      <TableCell></TableCell>
+    </TableRow>
   );
 }
+
+export default TableRowComponent;

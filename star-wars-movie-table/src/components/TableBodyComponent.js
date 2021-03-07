@@ -1,11 +1,13 @@
 import React from 'react';
 import { TableBody } from '@material-ui/core';
+import TableRowComponent from './TableRowComponent.js'
 
 
 function TableBodyComponent(props) {
-  console.log(props);
+  let { movies } = props
+  console.log(movies)
   return (
-    <TableBody>{}</TableBody>
+    <TableBody>{movies.map((movie, index) => <TableRowComponent movie={movie} key={index} />)}</TableBody>
   );
 }
 
