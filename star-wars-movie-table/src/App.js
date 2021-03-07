@@ -9,13 +9,19 @@ function App() {
     axios.get('https://swapi.dev/api/films/')
   );
 
-  console.log('this is your api data', data);
-  return (
-    <div className="App">
-      <h1>Star Wars Movie Table</h1>
-      <TableComponent />
-    </div>
-  );
+  if (isLoading) {
+    return (
+      <div>...is Loading</div>
+    );
+
+  } else {
+    return (
+      <div className="App">
+        <h1>Star Wars Movie Table</h1>
+        <TableComponent />
+      </div>
+    );
+  }
 }
 
 export default App;
