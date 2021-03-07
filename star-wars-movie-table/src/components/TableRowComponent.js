@@ -7,7 +7,7 @@ function TableRowComponent(props) {
   return (
     <TableRow>
       <TableCell>{movie.title}</TableCell>
-      <TableCell>{movie.movie_id}</TableCell>
+      <TableCell>{movie.episode_id}</TableCell>
       <TableCell>{movie.release_date}</TableCell>
       <TableCell>{movie.director}</TableCell>
     </TableRow>
