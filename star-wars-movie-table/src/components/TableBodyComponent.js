@@ -1,13 +1,11 @@
 import React from 'react';
 import { TableBody } from '@material-ui/core';
 
-function TableBodyComponent() {
-  return (
-    <div>
-      <TableBody>
 
-      </TableBody>
-    </div>
+function TableBodyComponent(props) {
+  console.log(props);
+  return (
+    <TableBody>{}</TableBody>
   );
 }
 

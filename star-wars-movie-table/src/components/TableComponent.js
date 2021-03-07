@@ -7,12 +7,10 @@ import TableBodyComponent from './TableBodyComponent.js';
 
 function TableComponent() {
   return (
-    <div>
-      <Table>
-        <TableHeader />
-        <TableBodyComponent />
-      </Table>
-    </div>
+    <Table>
+      <TableHeader />
+      <TableBodyComponent movies={sampleData}/>
+    </Table>
   );
 }
 
