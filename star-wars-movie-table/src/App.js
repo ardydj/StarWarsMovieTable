@@ -1,6 +1,7 @@
 import './App.css';
 import TableComponent from './components/TableComponent.js';
 import { useQuery } from 'react-query';
+import { Skeleton } from '@material-ui/lab';
 const axios = require('axios');
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div>...is Loading</div>
+      <Skeleton variant="rect" animation="wave"></Skeleton>
     );
 
   } else {
