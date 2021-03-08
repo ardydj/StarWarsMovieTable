@@ -20,6 +20,7 @@ function AppSkeletonTestComponent(props) {
   }
 }
 
+
 test('renders skeleton component when loading API data', async () => {
   render(<AppSkeletonTestComponent isLoading={true}/>);
 
