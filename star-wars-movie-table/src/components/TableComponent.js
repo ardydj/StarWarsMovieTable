@@ -5,8 +5,7 @@ import TableBodyComponent from './TableBodyComponent.js';
 
 
 function TableComponent(props) {
-  let { movieData } = props
-  console.log('this is your movieData: ', movieData)
+  let { movieData } = props;
   return (
     <Table>
       <TableHeader />

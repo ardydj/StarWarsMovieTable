@@ -4,8 +4,7 @@ import TableRowComponent from './TableRowComponent.js'
 
 
 function TableBodyComponent(props) {
-  let { movies } = props
-  console.log(movies)
+  let { movies } = props;
   return (
     <TableBody>{movies.map((movie, index) => <TableRowComponent movie={movie} key={index} />)}</TableBody>
   );
