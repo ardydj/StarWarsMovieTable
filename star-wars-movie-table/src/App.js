@@ -2,6 +2,10 @@ import './App.css';
 import TableComponent from './components/TableComponent.js';
 import { useQuery } from 'react-query';
 import { Skeleton } from '@material-ui/lab';
+import { Table } from '@material-ui/core';
+import { TableHead } from '@material-ui/core';
+import { TableBody } from '@material-ui/core';
+import { TableRow } from '@material-ui/core';
 const axios = require('axios');
 
 function App() {
@@ -11,7 +15,20 @@ function App() {
 
   if (isLoading) {
     return (
-      <Skeleton variant="rect" animation="wave"></Skeleton>
+      <div>
+        <Skeleton height={100}/>
+        <Table>
+          <TableHead>
+            <TableRow><Skeleton height={75}/></TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow><Skeleton height={50}/></TableRow>
+            <TableRow><Skeleton height={50}/></TableRow>
+            <TableRow><Skeleton height={50}/></TableRow>
+            <TableRow><Skeleton height={50}/></TableRow>
+          </TableBody>
+        </Table>
+      </div>
     );
 
   } else {
