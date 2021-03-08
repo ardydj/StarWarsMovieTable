@@ -5,7 +5,7 @@ import { TableBody } from '@material-ui/core';
 import { TableRow } from '@material-ui/core';
 import { TableCell } from '@material-ui/core';
 
-function EmptyTableComponent(props) {
+function EmptyTableComponent() {
   return (
     <Table>
       <TableHeader />

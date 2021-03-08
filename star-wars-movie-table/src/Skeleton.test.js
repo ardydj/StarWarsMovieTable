@@ -2,7 +2,7 @@ import React from 'react';
 import SkeletonComponent from './components/SkeletonComponent.js';
 import sampleData from './SampleTableData.js';
 import TableComponent from './components/TableComponent.js';
-import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 
 function AppSkeletonTestComponent(props) {
   let { isLoading } = props;
