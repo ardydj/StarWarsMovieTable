@@ -28,3 +28,11 @@ test('renders skeleton component when loading API data', async () => {
   });
 });
 
+test('does not render skeleton component when data is fully loaded', async () => {
+  render(<AppSkeletonTestComponent isLoading={false}/>);
+
+  await waitFor(() => {
+    expect(screen.queryByTestId('skeleton-test')).not.toBeInTheDocument();
+  });
+});
+

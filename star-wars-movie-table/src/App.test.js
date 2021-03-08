@@ -13,7 +13,6 @@ function AppTestComponent() {
   );
 }
 
-
 test('renders page header when API data is loaded', async () => {
   render(<AppTestComponent />);
 
