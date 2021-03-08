@@ -3,7 +3,7 @@ import { Skeleton } from '@material-ui/lab';
 
 function SkeletonComponent() {
   return (
-    <div>
+    <div data-testid="skeleton-test">
       <Skeleton height={100}/>
       <Skeleton height={75}/>
       <Skeleton height={50}/>
