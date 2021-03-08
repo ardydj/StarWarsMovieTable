@@ -45,11 +45,27 @@ test('renders movie titles into table body when API data is loaded', async () =>
   });
 })
 
-// test('renders a skeleton of table when loading API', async () => {
-//   render(<AppTestComponent />);
+test('renders movie episodes into table body when API data is loaded', async () => {
+  render(<AppTestComponent />);
 
-//   await waitFor(() => {
-//     expect(screen.getByText('Star Wars Movie Table').toBeInTheDocument())
-//   });
-// })
+  await waitFor(() => {
+    expect(screen.getByText('1')).toBeInTheDocument();
+    expect(screen.getByText('2')).toBeInTheDocument();
+    expect(screen.getByText('3')).toBeInTheDocument();
+    expect(screen.getByText('4')).toBeInTheDocument();
+    expect(screen.getByText('5')).toBeInTheDocument();
+    expect(screen.getByText('6')).toBeInTheDocument();
+  });
+})
+
+test('renders directors into table body when API data is loaded', async () => {
+  render(<AppTestComponent />);
+
+  await waitFor(() => {
+    expect(screen.getAllByText('George Lucas')).toHaveLength(4);
+    expect(screen.getByText('Irvin Kershner')).toBeInTheDocument();
+    expect(screen.getByText('Richard Marquand')).toBeInTheDocument();
+  });
+})
+
 
