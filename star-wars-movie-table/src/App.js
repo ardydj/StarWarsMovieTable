@@ -1,6 +1,7 @@
 import './App.css';
 import TableComponent from './components/TableComponent.js';
 import SkeletonComponent from './components/SkeletonComponent.js';
+import EmptyTableComponent from './components/EmptyTableComponent.js';
 import { useQuery } from 'react-query';
 const axios = require('axios');
 
@@ -18,7 +19,7 @@ function App() {
     return (
       <div className="App">
         <h1>Star Wars Movie Table</h1>
-        <TableComponent movieData={data.data}/>
+        {isError ? <EmptyTableComponent /> : <TableComponent movieData={data.data}/>}
       </div>
     );
   }
