@@ -13,17 +13,35 @@ function AppTestComponent() {
   );
 }
 
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/Hello World/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
-
 test('renders page header when API data is loaded', async () => {
   render(<AppTestComponent />);
 
   await waitFor(() => {
     expect(screen.getByText('Star Wars Movie Table')).toBeInTheDocument();
+  });
+})
+
+test('renders table header when API data is loaded', async () => {
+  render(<AppTestComponent />);
+
+  await waitFor(() => {
+    expect(screen.getByText('Title')).toBeInTheDocument();
+    expect(screen.getByText('Episode Id')).toBeInTheDocument();
+    expect(screen.getByText('Release Date')).toBeInTheDocument();
+    expect(screen.getByText('Director')).toBeInTheDocument();
+  });
+})
+
+test('renders movie titles into table body when API data is loaded', async () => {
+  render(<AppTestComponent />);
+
+  await waitFor(() => {
+    expect(screen.getByText('A New Hope')).toBeInTheDocument();
+    expect(screen.getByText('The Empire Strikes Back')).toBeInTheDocument();
+    expect(screen.getByText('Return of the Jedi')).toBeInTheDocument();
+    expect(screen.getByText('The Phantom Menace')).toBeInTheDocument();
+    expect(screen.getByText('Attack of the Clones')).toBeInTheDocument();
+    expect(screen.getByText('Revenge of the Sith')).toBeInTheDocument();
   });
 })
 
